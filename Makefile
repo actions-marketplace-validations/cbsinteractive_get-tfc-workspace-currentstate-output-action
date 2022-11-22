@@ -21,7 +21,7 @@ setup-venv: pre-setup-venv
 	@$(PIP) install -r requirements.txt
 
 .PHONY: install-root-packages
-install-root-packages:
+reinstall-root-packages: pre-setup-venv
 	@$(PIP) install isort black flake8 pytest
 
 .PHONY: save-requirements
